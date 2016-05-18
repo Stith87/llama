@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The Llama Store</title>
+  <meta name="description" content="llama.com">
+  <meta name="author" content="Michael G. Stith">
+
+  {{> assets}}
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+	
+	<div class="flex-container" id="profile">
+
+			<img src="{{llama.img}}" />
+			<div class="details">
+				<h1>{{llama.name}}</h1>
+				<h2>{{llama.price}}</h2>
+				<span class="age">Age: {{llama.age}}</span>
+				<span class="hometown">Hometown: {{llama.hometown}}</span>
+				<a href="#" id="request">Request {{llama.name}}</a>
+			</div>
+		
+	</div>
+	<h3 class="center">You May Also Like</h3>
+	<div class="flex-container">
+		{{#each llamas}}
+		<div class="flex-item">
+			<a href="/llama/{{this.id}}"><img class="img-thumb" src="{{this.img}}" /></a>
+			<a href="/llama/{{this.id}}"><span class="name">{{this.name}}</span></a>
+			<span class="age">{{this.age}}</span>
+			<span class="hometown">{{this.hometown}}</span>
+		</div>
+		{{/each}}
+	</div>
+</body>
+
+</html>

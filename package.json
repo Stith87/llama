@@ -1,0 +1,20 @@
+{
+  "name": "llama",
+  "version": "1.0.0",
+  "description": "Llama site for Front-End Development Badge",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "llama"
+  ],
+  "author": "Michael G. Stith",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.0.5",
+    "hapi": "^13.0.0",
+    "inert": "^4.0.0",
+    "vision": "^4.1.0"
+  }
+}
