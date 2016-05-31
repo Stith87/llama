@@ -14,11 +14,27 @@
 </head>
 
 <body>
-	<div class="row">
+	{{> nav}}
+	<div class="row spacer">
 		<h1 class="center">The Llama Store</h1>
-		<div class="flex-container">  
+		<div class="flex-container">
+			<div id="home-slider">
+				<button class="previous">
+					&#60;
+				</button>				
+				<img src="/assets/img/llama_1.jpg" />
+				<img src="/assets/img/llama_2.jpg" />
+				<img src="/assets/img/llama_3.jpg" />
+				<img src="/assets/img/llama_4.jpg" />
+				<img src="/assets/img/llama_5.jpg" />
+				<button class="next">
+					&#62;
+				</button>
+			</div>
+		</div>
+		<div class="flex-container">  			
 			{{#each llamas}}
-				<div class="flex-item">
+				<div class="flex-item llama">
 					<a href="/llama/{{this.id}}"><img src="{{this.img}}" class="img-thumb" /></a>
 					<span class="name"><a href="/llama/{{this.id}}">{{this.name}}</a></span>
 					<span class="price">{{this.price}}</span>
@@ -26,7 +42,7 @@
 						<span class="age">Age: {{this.age}}</span>
 						<span class="hometown">Hometown: {{this.hometown}}</span>
 					</div>
-					
+
 				</div> 
 			{{/each}}
 			

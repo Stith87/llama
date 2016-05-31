@@ -29,9 +29,24 @@ module.exports = [
     	function filterId(llama){
     		return llama.id != request.params.id;
     	}
+
     	var llama = llamas.find(findId);
     	var others = llamas.filter(filterId);
     	reply.view('profile', {llama: llama, llamas: others});
     }
-  }
+  },
+  {
+    method: 'GET',
+    path: '/about',
+    handler: (request, reply) => {
+    	reply.view('about');
+    }
+	},
+	{
+    method: 'GET',
+    path: '/contact',
+    handler: (request, reply) => {
+    	reply.view('contact');
+    }
+	}
 ]

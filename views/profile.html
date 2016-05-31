@@ -13,8 +13,8 @@
   <![endif]-->
 </head>
 <body>
-	
-	<div class="flex-container" id="profile">
+	{{> nav}}
+	<div class="flex-container spacer" id="profile">
 
 			<img src="{{llama.img}}" />
 			<div class="details">
@@ -22,7 +22,7 @@
 				<h2>{{llama.price}}</h2>
 				<span class="age">Age: {{llama.age}}</span>
 				<span class="hometown">Hometown: {{llama.hometown}}</span>
-				<a href="#" id="request">Request {{llama.name}}</a>
+				<a href="mailto:mstith@zappos.com?subject=I'm Interested in {{llama.name}}" id="request">Request {{llama.name}}</a>
 			</div>
 		
 	</div>
